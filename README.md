@@ -12,18 +12,17 @@
 
 ###### What could be improved
 
-- Support real idempotence of all messages processed with provided UUIDs
-- Improve overall safety with better error handling for edge cases
-- Implement microservice architecture allowing multiple distributed servers work in parallel
+- Implement performant **sharded map** allowing higher levels of concurrent access 
+- Allow real idempotence of message flow and processing with provided UUIDs
+- Allow multiple servers work in parallel within distributed network
 - Order stored key-values with timestamp or key (not idiomatic for Go)
-- Allow support for different queue protocols like AMQP / RabbitMQ
-- Improve logging with something more mature like **uber/zap** package
-- Prepare for cloud deploy with Docker / Kubernetes
+- Improve logging with something like **uber/zap** package
+- Graceful shutdown without loosing the local server state
 - All kinds of testing :)
 
 ###### How to build?
 
-On Linux, just type **make** :)
+On Linux, just type **make** :) You also might need to manually run **go mod tidy** to install project dependencies locally. 
 
 ###### How to start?
 
